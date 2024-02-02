@@ -1,3 +1,0 @@
-/home/navin/programming/opengl/bin/CMakeFiles/main.dir
-/home/navin/programming/opengl/bin/CMakeFiles/edit_cache.dir
-/home/navin/programming/opengl/bin/CMakeFiles/rebuild_cache.dir
