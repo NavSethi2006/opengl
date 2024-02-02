@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "glfw3.h": "c",
+        "vulkan_core.h": "c",
+        "stdio.h": "c",
+        "gl.h": "c",
+        "glext.h": "c",
+        "window.h": "c",
+        "freeglut.h": "c",
+        "glad.h": "c",
+        "expected": "c",
+        "stdlib.h": "c",
+        "string.h": "c"
+    }
+}

@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/main.dir/src/glad.c.o CMakeFiles/main.dir/src/main.c.o CMakeFiles/main.dir/src/window.c.o -o main  -Wl,-rpath,/home/navin/programming/opengl/lib -lm -ldl -lpthread -lX11 -lXrandr -lglfw -lGL -lGLU -lglut /home/navin/programming/opengl/lib/libcglm.so 
