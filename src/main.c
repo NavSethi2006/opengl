@@ -3,6 +3,7 @@
 #include "glad.h"
 #include <GLFW/glfw3.h>
 #include "window.h"
+#include "triangle.h"
 
 int main() {
 
@@ -24,7 +25,7 @@ int main() {
     while(!glfwWindowShouldClose(window)) {
         window_update_prev();
         
-
+        init_triangle();
 
 
         window_update_after();
