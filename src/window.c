@@ -9,26 +9,24 @@ void window_init() {
         exit(1);
     }
     glfwMakeContextCurrent(_window);
-    glViewport(0,0,800,600);
-
     glfwSetFramebufferSizeCallback(_window, resize_callback);
+    
+}
 
+void window_close_callback(GLFWwindow* window) {
+    exit(0);
 }
 
 void resize_callback(GLFWwindow* window, int width, int height) {
     glViewport(0,0,width,height);
 }
 
-void window_update_prev() {
-
-    if(glfwGetKey(_window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        exit(0);
-
+void window_update_after() {
     glfwSwapBuffers(_window);
     glfwPollEvents();
 }
 
-void window_update_after() {
+void window_update_prev() {
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 } 

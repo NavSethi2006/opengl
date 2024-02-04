@@ -1,6 +1,7 @@
-# version 330 core
-layout (location = 0) in vec3 apos;
+#version 330 core
+layout (location = 0) in vec3 aPos;
 
-void main() {
-    gl_Position(apos.x, apos.y, apos.z, 1.0);
+void main()
+{
+    gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);
 }
