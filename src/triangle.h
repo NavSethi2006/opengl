@@ -1,7 +1,8 @@
+#pragma once
 #include "glad.h"
 #include <GLFW/glfw3.h>
-#include "utils.h"
+#include "shader.h"
 
-void init_triangle();
+void triangle_();
 
 void render_triangle();

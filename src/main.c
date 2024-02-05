@@ -22,7 +22,7 @@ int main() {
         exit(1);
     }  
 
-    init_triangle();
+    triangle_();
 
     while(!glfwWindowShouldClose(window)) {
         window_update_prev();

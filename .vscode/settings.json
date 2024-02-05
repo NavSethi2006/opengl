@@ -11,6 +11,10 @@
         "expected": "c",
         "stdlib.h": "c",
         "string.h": "c",
-        "triangle.h": "c"
+        "triangle.h": "c",
+        "util.h": "c",
+        "utils.h": "c",
+        "stdbool.h": "c",
+        "shader.h": "c"
     }
 }

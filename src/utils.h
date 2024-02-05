@@ -1,21 +1,17 @@
 #pragma once
 
 #include <stdlib.h>
+#include <stdbool.h>
 #include <stdio.h>
-#include "glad.h"
+#include <errno.h>
 
-const static GLchar** read_shader(char *file_name) {
-    FILE* shader_file = fopen(file_name, "r");
+#define READ_CHUNK_SIZE 2097152
 
-    int file_size;
-    char *vertex_shader;
+typedef struct File {
+    char *data;
+    size_t len;
+    bool is_valid;
+}File;
 
-    fseek(shader_file, 0, SEEK_END);
-    file_size = ftell(shader_file);
-
-    vertex_shader = (char*)malloc(sizeof(char) * (file_size+1));
-    fread(vertex_shader, sizeof(char), file_size, shader_file);
-    vertex_shader[file_size] = '\0';
-    
-    return (const GLchar**)vertex_shader;
-}
+File file_read(const char *path);
+int file_write(void *buffer, size_t size, const char *path);
