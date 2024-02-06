@@ -1,10 +1,9 @@
 #include "triangle.h"
 
-float verticies[] = {
+float vertici[] = {
     0.5f,  -0.5f, 0.0f, 
     -0.5f, -0.5f, 0.0f,
     0.5f, 0.5f, 0.0f,  
-
 };
 
 unsigned int VBO;
@@ -13,7 +12,7 @@ int triangle_shader;
 
 void triangle_() {
 
-    triangle_shader = shader_("../src/shaders/vertex.glsl","../src/shaders/vertex.glsl");
+    triangle_shader = shader_("../src/shaders/tri_vertex.glsl","../src/shaders/tri_frag.glsl");
 
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER,VBO);
@@ -21,7 +20,7 @@ void triangle_() {
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
 
-    glBufferData(GL_ARRAY_BUFFER, sizeof(verticies), verticies, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertici), vertici, GL_STATIC_DRAW);
 
     glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE, 3 * sizeof(float), (void*) 0);
     glEnableVertexAttribArray(0);

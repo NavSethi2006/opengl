@@ -1,9 +1,12 @@
 #pragma once
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "glad.h"
-
-#define STB_IMAGE_IMPLEMENTATION
+#include <GLFW/glfw3.h>
+#include "shader.h"
 #include "stb/stb_image.h"
 
 void texture_();
+
+void render_texture();

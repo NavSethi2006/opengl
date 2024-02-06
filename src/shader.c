@@ -4,8 +4,8 @@
 
 int shader_(const char* vertex_path, const char* fragment_path) {
     
-    File vertex_file = file_read("../src/shaders/vertex.glsl");
-    File fragment_file = file_read("../src/shaders/fragment.glsl");
+    File vertex_file = file_read(vertex_path);
+    File fragment_file = file_read(fragment_path);
 
     unsigned int vertex;
     int vertex_success;

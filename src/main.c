@@ -4,6 +4,9 @@
 #include <GLFW/glfw3.h>
 #include "window.h"
 #include "triangle.h"
+#define STB_IMAGE_IMPLEMENTATION
+#include "texture.h"
+
 
 int main() {
 
@@ -22,12 +25,16 @@ int main() {
         exit(1);
     }  
 
-    triangle_();
+ //   triangle_();
+
+    texture_();
 
     while(!glfwWindowShouldClose(window)) {
         window_update_prev();
         
-        render_triangle();
+  //      render_triangle();
+
+        render_texture();
 
         window_update_after();
     }

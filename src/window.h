@@ -12,3 +12,5 @@ void window_update_after();
 GLFWwindow *window();
 
 void resize_callback(GLFWwindow* window, int width, int height);
+
+void close_window_callback(GLFWwindow* window);

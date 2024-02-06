@@ -10,18 +10,22 @@ void window_init() {
     }
     glfwMakeContextCurrent(_window);
     glfwSetFramebufferSizeCallback(_window, resize_callback);
+    glfwSetWindowCloseCallback(_window,close_window_callback);
     
 }
 
-void window_close_callback(GLFWwindow* window) {
-    exit(0);
+void close_window_callback(GLFWwindow *window)
+{
+  glfwSetWindowShouldClose(window, GL_TRUE);
+  printf("window closed with no ERRORS\n");
+  exit(0);
 }
 
 void resize_callback(GLFWwindow* window, int width, int height) {
     glViewport(0,0,width,height);
 }
 
-void window_update_after() {
+void  window_update_after() {
     glfwSwapBuffers(_window);
     glfwPollEvents();
 }
